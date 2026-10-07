@@ -1,0 +1,521 @@
+:root {
+    --primary: #f5b027;
+    /* Yellow from logo */
+    --black: #111111;
+    --white: #ffffff;
+    --gray-bg: #f9f9f9;
+    --text-color: #333333;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    color: var(--text-color);
+    background-color: var(--white);
+    line-height: 1.6;
+    scroll-behavior: smooth;
+}
+
+h1,
+h2,
+h3,
+.logo-text,
+.member-card h2 {
+    font-family: 'Playfair Display', serif;
+}
+
+/* Navbar */
+.navbar {
+    background-color: var(--white);
+    border-bottom: 1px solid #eee;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.nav-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1.5rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+}
+
+.logo-img {
+    height: 65px;
+    width: auto;
+    mix-blend-mode: multiply;
+}
+
+.logo-text {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: var(--black);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: var(--black);
+    font-weight: 600;
+    font-size: 0.95rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.nav-links a:hover {
+    color: var(--primary);
+}
+
+/* Hero Section */
+.hero {
+    background-color: var(--gray-bg);
+    padding: 6rem 2rem;
+    text-align: center;
+}
+
+.hero-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.hero h1 {
+    font-size: 4rem;
+    line-height: 1.2;
+    color: var(--black);
+    margin-bottom: 1.5rem;
+}
+
+.highlight {
+    color: var(--primary);
+}
+
+.hero p {
+    font-size: 1.2rem;
+    color: #666;
+    margin-bottom: 3rem;
+}
+
+/* Buttons */
+.btn-primary,
+.btn-secondary {
+    display: inline-block;
+    padding: 1rem 2.5rem;
+    font-weight: 600;
+    text-decoration: none;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 0.9rem;
+}
+
+.btn-primary {
+    background-color: var(--black);
+    color: var(--primary);
+    border: 2px solid var(--black);
+}
+
+.btn-primary:hover {
+    background-color: transparent;
+    color: var(--black);
+}
+
+.btn-secondary {
+    background-color: transparent;
+    color: var(--black);
+    border: 2px solid var(--black);
+    margin-left: 1rem;
+}
+
+.btn-secondary:hover {
+    background-color: var(--black);
+    color: var(--primary);
+}
+
+.btn-primary.large {
+    font-size: 1.1rem;
+    padding: 1.2rem 3rem;
+}
+
+/* Sections */
+.collection,
+.membership {
+    padding: 6rem 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.section-header {
+    text-align: center;
+    margin-bottom: 4rem;
+}
+
+.section-header h2 {
+    font-size: 2.5rem;
+    color: var(--black);
+    margin-bottom: 1rem;
+}
+
+.section-header p {
+    color: #666;
+    font-size: 1.1rem;
+}
+
+/* Carousel Wrapper */
+.carousel-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+    max-width: 100%;
+    padding: 0 1rem;
+}
+
+.carousel-track {
+    display: flex;
+    gap: 2rem;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    padding: 1rem 0;
+    scrollbar-width: none;
+    /* Firefox */
+    -ms-overflow-style: none;
+    /* IE and Edge */
+    width: 100%;
+}
+
+.carousel-track::-webkit-scrollbar {
+    display: none;
+    /* Chrome, Safari, Opera */
+}
+
+.carousel-track .card {
+    flex: 0 0 320px;
+    scroll-snap-align: center;
+}
+
+.carousel-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: var(--white);
+    color: var(--black);
+    border: 1px solid #ddd;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    font-size: 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    z-index: 10;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.carousel-btn:hover {
+    background: var(--primary);
+    color: var(--black);
+    border-color: var(--primary);
+}
+
+.prev-btn {
+    left: 0;
+}
+
+.next-btn {
+    right: 0;
+}
+
+.card {
+    background: var(--white);
+    border: 1px solid #eee;
+    border-radius: 8px;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
+}
+
+.card img {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    background-color: #f0f0f0;
+}
+
+.card-info {
+    padding: 1.5rem;
+    text-align: center;
+}
+
+.card-info h3 {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+    color: var(--black);
+}
+
+.card-info p {
+    color: #888;
+    font-size: 0.9rem;
+}
+
+/* Membership Section */
+.membership-tiers {
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+    margin-bottom: 5rem;
+}
+
+.tier-card {
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+    background: var(--white);
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+}
+
+.tier-card:nth-child(even) {
+    flex-direction: row-reverse;
+}
+
+/* Member Cards CSS styling (to mimic user images) */
+.member-card {
+    width: 450px;
+    height: 280px;
+    border-radius: 12px;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+    position: relative;
+    overflow: hidden;
+}
+
+.card-top {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.75rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.card-center {
+    text-align: center;
+}
+
+.card-center h2 {
+    font-size: 2.8rem;
+    line-height: 1;
+    margin-bottom: 0.2rem;
+}
+
+.card-center p {
+    font-size: 0.8rem;
+    letter-spacing: 4px;
+    margin-bottom: 1rem;
+}
+
+.divider {
+    font-size: 0.9rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.divider::before,
+.divider::after {
+    content: "";
+    flex: 1;
+    height: 2px;
+    margin: 0 10px;
+}
+
+.card-bottom p {
+    font-size: 0.85rem;
+    margin-bottom: 0.3rem;
+    font-family: monospace;
+}
+
+/* Specific Card Styles */
+.silver {
+    background-color: #b8b8b8;
+    color: #1a1a1a;
+}
+
+.silver .divider::before,
+.silver .divider::after {
+    background-color: #1a1a1a;
+}
+
+.gold {
+    background-color: #1a202c;
+    color: #d4af37;
+}
+
+.gold .divider::before,
+.gold .divider::after {
+    background-color: #d4af37;
+}
+
+.gold .card-bottom p {
+    color: #d4af37;
+}
+
+.diamond {
+    background-color: #0b132b;
+    color: #e0fbfc;
+}
+
+.diamond .divider::before,
+.diamond .divider::after {
+    background-color: #e0fbfc;
+}
+
+.diamond .card-bottom p {
+    color: #e0fbfc;
+}
+
+/* VIP Image Card */
+.vip-card-image {
+    width: 450px;
+    height: 280px;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
+}
+
+.vip-card-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.tier-info {
+    flex: 1;
+}
+
+.tier-info h3 {
+    font-size: 2rem;
+    color: var(--black);
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.tier-info p,
+.tier-info ul {
+    font-size: 1.1rem;
+    color: #555;
+}
+
+.tier-info ul {
+    list-style-type: disc;
+    margin-left: 1.5rem;
+}
+
+.tier-info ul li {
+    margin-bottom: 0.5rem;
+}
+
+.badge {
+    background: var(--primary);
+    color: var(--black);
+    font-size: 0.8rem;
+    padding: 0.2rem 0.6rem;
+    border-radius: 20px;
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
+}
+
+/* CTA Container */
+.cta-container {
+    text-align: center;
+    background-color: var(--gray-bg);
+    padding: 4rem;
+    border-radius: 12px;
+    border: 1px solid #eaeaea;
+}
+
+.cta-container h3 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: var(--black);
+}
+
+.cta-container p {
+    margin-bottom: 2.5rem;
+    color: #666;
+    font-size: 1.1rem;
+}
+
+/* Footer */
+footer {
+    background-color: var(--black);
+    color: var(--white);
+    text-align: center;
+    padding: 2rem;
+    font-size: 0.9rem;
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+
+    .tier-card,
+    .tier-card:nth-child(even) {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .member-card,
+    .vip-card-image {
+        width: 100%;
+        max-width: 450px;
+    }
+
+    .tier-info ul {
+        text-align: left;
+        display: inline-block;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero h1 {
+        font-size: 2.8rem;
+    }
+
+    .nav-links {
+        display: none;
+    }
+}

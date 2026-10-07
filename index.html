@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Titik Temu | Clothing Store</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Inter:wght@300;400;600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <img src="assets/logo.png" alt="Logo Titik Temu" class="logo-img">
+                <span class="logo-text">Titik Temu</span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#koleksi">Koleksi Skena</a></li>
+                <li><a href="#membership">Membership</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="hero">
+        <div class="hero-content">
+            <h1>Temukan <br><span class="highlight">Gaya Skenamu</span></h1>
+            <p>Eksplorasi koleksi pakaian terbaru yang dirancang khusus
+                untuk kamu yang ingin tampil beda.</p>
+            <a href="#membership" class="btn-primary">Daftar Member</a>
+            <a href="#koleksi" class="btn-secondary">Lihat Baju</a>
+        </div>
+    </header>
+
+    <!-- Collection Section -->
+    <section id="koleksi" class="collection">
+        <div class="section-header">
+            <h2>Koleksi Skena</h2>
+            <p>Desain rapi, simpel, dan berkelas.</p>
+        </div>
+        <div class="carousel-wrapper">
+            <button class="carousel-btn prev-btn" aria-label="Previous">&#10094;</button>
+            <div class="carousel-track">
+                <div class="card">
+                    <img src="assets/shirt1.png" alt="Baju Skena 1">
+                    <div class="card-info">
+                        <h3>Minimalist Typo Tee</h3>
+                        <p>Oversized Fit - White</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="assets/shirt2.png" alt="Baju Skena 2">
+                    <div class="card-info">
+                        <h3>Vintage Graphic Tee</h3>
+                        <p>Washed Black - Heavyweight</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="assets/shirt3.png" alt="Baju Skena 3">
+                    <div class="card-info">
+                        <h3>Bold Statement Hoodie</h3>
+                        <p>Oversized Fit - Light Gray</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="assets/shirt4.png" alt="Baju Skena 4">
+                    <div class="card-info">
+                        <h3>Metallic Type Tee</h3>
+                        <p>Washed Black - Premium</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="assets/shirt5.png" alt="Baju Skena 5">
+                    <div class="card-info">
+                        <h3>Utility Cargo Jacket</h3>
+                        <p>Dark Olive - Functional</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="assets/shirt6.png" alt="Baju Skena 6">
+                    <div class="card-info">
+                        <h3>Abstract Longsleeve</h3>
+                        <p>Vintage Wash - Relaxed</p>
+                    </div>
+                </div>
+            </div>
+            <button class="carousel-btn next-btn" aria-label="Next">&#10095;</button>
+        </div>
+    </section>
+
+    <!-- Membership Section -->
+    <section id="membership" class="membership">
+        <div class="section-header">
+            <h2>Membership Titik Temu</h2>
+            <p>Bergabunglah dengan komunitas kami dan nikmati berbagai
+                keuntungan eksklusif.</p>
+        </div>
+
+        <div class="membership-tiers">
+
+            <!-- Silver -->
+            <div class="tier-card">
+                <div class="member-card silver">
+                    <div class="card-top">
+                        <span>FASHION / STYLE / YOU</span>
+                        <span>SILVER</span>
+                    </div>
+                    <div class="card-center">
+                        <h2>Titik Temu</h2>
+                        <p>CLOTHING STORE</p>
+                        <div class="divider">MEMBER CARD</div>
+                    </div>
+                    <div class="card-bottom">
+                        <p>Name : _________________</p>
+                        <p>Phone : _________________</p>
+                        <p>Member Since : ___/___/____</p>
+                    </div>
+                </div>
+                <div class="tier-info">
+                    <h3>Silver Member</h3>
+                    <p>Mendapatkan <strong>Diskon 20%</strong> untuk semua
+                        pembelian produk Titik Temu.</p>
+                </div>
+            </div>
+
+            <!-- Gold -->
+            <div class="tier-card">
+                <div class="member-card gold">
+                    <div class="card-top">
+                        <span>FASHION / STYLE / YOU</span>
+                        <span>GOLD</span>
+                    </div>
+                    <div class="card-center">
+                        <h2>Titik Temu</h2>
+                        <p>CLOTHING STORE</p>
+                        <div class="divider">MEMBER CARD</div>
+                    </div>
+                    <div class="card-bottom">
+                        <p>Name : _________________</p>
+                        <p>Phone : _________________</p>
+                        <p>Member Since : ___/___/____</p>
+                    </div>
+                </div>
+                <div class="tier-info">
+                    <h3>Gold Member</h3>
+                    <p>Mendapatkan <strong>Diskon 40%</strong> untuk semua
+                        pembelian produk Titik Temu.</p>
+                    <p>Keuntungan <strong>Free Item</strong> aksesoris
+                        setiap pembelian produk.</p>
+                </div>
+            </div>
+
+            <!-- Diamond -->
+            <div class="tier-card">
+                <div class="member-card diamond">
+                    <div class="card-top">
+                        <span>FASHION / STYLE / YOU</span>
+                        <span>DIAMOND</span>
+                    </div>
+                    <div class="card-center">
+                        <h2>Titik Temu</h2>
+                        <p>CLOTHING STORE</p>
+                        <div class="divider">MEMBER CARD</div>
+                    </div>
+                    <div class="card-bottom">
+                        <p>Name : _________________</p>
+                        <p>Phone : _________________</p>
+                        <p>Member Since : ___/___/____</p>
+                    </div>
+                </div>
+                <div class="tier-info">
+                    <h3>Diamond Member</h3>
+                    <p>Promo eksklusif <strong>Buy 1 Get 1</strong> untuk
+                        koleksi pilihan kami.</p>
+                </div>
+            </div>
+
+            <!-- VIP -->
+            <div class="tier-card vip-tier">
+                <div class="vip-card-image">
+                    <img src="assets/vip.jpeg" alt="VIP Member Card">
+                </div>
+                <div class="tier-info">
+                    <h3>VIP Member <span class="badge">EKSKLUSIF</span></h3>
+                    <ul>
+                        <li><strong>Gratis Baju</strong> setiap ada
+                            perilisan desain baju baru (mis. per 6
+                            bulan).</li>
+                        <li>Berlaku layaknya <em>endorser</em> Titik
+                            Temu.</li>
+                        <li><strong>Info Tercepat</strong> jika ada item
+                            baru.</li>
+                        <li>Prioritas <strong>Booking Duluan</strong>
+                            melalui Email.</li>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="cta-container">
+            <h3>Tertarik Menjadi Member Kami?</h3>
+            <p>Isi formulir pendaftaran sekarang dan dapatkan kartu member
+                Anda.</p>
+            <a href="https://forms.gle/JzJpLzmPFLHWynLf9" target="_blank" class="btn-primary large">Buat Kartu Member
+                (Google Form)</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2026 Titik Temu Clothing Store. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
